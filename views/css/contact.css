@@ -1,0 +1,505 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+body{
+    height: 100vh;
+}
+
+
+
+
+.navwrap{
+    position: absolute; 
+    top: 0px;
+    width: 100%; 
+    position: fixed;
+}
+.info{
+    height: 30px;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+.info div{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: red;
+}
+.info div p{
+   margin-left: 2px;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.96);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+.list{
+    display: flex;
+}
+.list li{
+    list-style: none;
+    margin-right: 50px;
+    font-size: 14px;
+}
+.list a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.list a::after{
+    content: "";
+    position: absolute;
+    background-color: #ff0000;
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.2s;
+}
+.list a:hover::after{
+    width: 100%;
+}
+.menubtn {
+    position: absolute;
+    right: 7px;
+    width: 30px;
+    height: 25px;
+    visibility: hidden;
+}
+.menubtn div{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0 5px 0;
+    transition: all 0.3s ease;
+}
+.menubtn:hover{
+    cursor: pointer;
+}
+
+
+
+
+.contactP1{
+    margin-top: 80px;
+    height: 800px;
+    /* background-color: #747474; */
+    background: linear-gradient(gray, white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactP1 h1{
+    margin-bottom: 10px;
+    color: red;
+}
+.contactP1 p{
+    max-width: 700px;
+    font-size: 18px;
+    color: #313131;
+}
+.line{
+    width: 300px;
+    height: 4px;
+    background-color: red;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+
+
+#form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#inputs input{
+    width: 300px;
+    height: 40px;
+    margin: 0px 10px 30px 10px;
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid red;
+    outline: none;
+    transition-duration: 0.5s;
+    background: none;
+}
+#inputs div{
+    display: flex;
+}
+#inputs input:focus{
+    border-bottom: 2px solid #6d6d6d;
+    transition-duration: 0.5s;
+}
+#tarea{
+    border: none;
+    width: 650px;
+    height: 150px;
+    font-size: 16px;
+    padding: 5px;
+    border-bottom: 2px solid red;
+    outline: none;
+    transition-duration: 0.5s;
+    background: none;
+}
+#tarea:focus{
+    border-bottom: 2px solid #6d6d6d;
+    transition-duration: 0.5s;
+}
+
+
+#inputs button{
+    color: white;
+    background-color: red;
+    margin-right: 20px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    z-index: 0;
+    text-decoration: none;
+}
+#inputs button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+     z-index: -1; 
+    transition: transform .2s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1,1,1);
+    transform: scaleX(0);
+}
+#inputs button:hover::before{
+    transform: scaleX(1);
+}
+#inputs button:hover{
+    color: #000000;
+    border: 1px solid rgb(136, 136, 136);
+}
+
+
+
+.contactP2{
+    /* height: 300px; */
+    /* background-color: #be9595; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactP2 h1{
+    font-weight: lighter;
+}
+
+.mapCont{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.information{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* background-color: #6d6d6d; */
+    background: linear-gradient(45deg, black, gray);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.information p{
+    font-size: 14px;
+}
+.information div {
+    width: 180px;
+    height: 170px;
+}
+.information i{
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+.smedia {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+.smedia i{
+    margin: 5px;
+    font-size: 25px;
+    color: white;
+}
+.smedia i:hover{
+    color: rgb(255, 0, 0);
+}
+
+.map{
+    width: 500px;
+    height: 500px;
+    background-color: #c4c4c4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color: #141414;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+footer h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #747474;
+
+}
+footer p {
+    color: #dddddd;
+}
+.f1{
+    padding: 0 10px 0 20px;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.f1 h2{
+    position: absolute;
+    top: 70px;
+}
+.f2 h2{
+    position: absolute;
+    top: 70px;
+}
+.f3 h2{
+    position: absolute;
+    top: 70px;
+}
+.f1 a{
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    font-size: 15px;
+}
+.f1 a:hover{
+    color: #ff0000;
+}
+.f2{
+    padding: 0 10px 0 10px;
+    width: 270px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.addr{
+    padding-top: 50px;
+}
+.f2 div{
+    display: flex;
+    margin: 5px;
+}
+.f2 p{
+    margin-left: 10px;
+}
+.icons{
+    display: flex;
+}
+.icons i{
+    color: #aaaaaa;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.icons i:hover{
+    color: #ff0000;
+   
+}
+.f3{
+    width: 250px;
+    padding: 0 10px 0 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.hours{
+    display: flex;
+} 
+.hours div{
+    margin-right: 30px;
+}
+.f4{
+    padding: 0 10px 0 10px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.f4 img{
+    width: 100px;
+    height: 100px;
+}
+.f4 a{
+    text-decoration: none;
+    font-size: 40px;
+    background-color: white;
+    padding: 0 5px 0 5px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #000000;
+}
+.f4 a:hover{
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+}
+.copyright{
+    background-color: #141414;
+    text-align: center;
+    padding: 5px;
+    color: rgb(196, 196, 196);
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 4rem;
+}
+
+
+/* RESPONSIVE WEBSITE */
+
+@media (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+    .menubtn {
+        visibility: visible;
+    }
+    .list{
+        position: absolute;
+        right: 0;
+        top: 5vh;
+        background-color: rgba(0, 0, 0, 0.96);
+        height: 95vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .list li{
+        margin-right: 0px;
+        opacity: 0;
+    }
+    
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .bar1{
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.toggle .bar2{
+    opacity: 0;
+}
+.toggle .bar3{
+    transform: rotate(45deg) translate(-8px, -6px);
+}
